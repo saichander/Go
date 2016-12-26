@@ -6,6 +6,7 @@ import (
 	"io/ioutil"
 	"os"
 	"strings"
+	"hash/crc32"
 )
 
 func main() {
@@ -52,4 +53,11 @@ func main() {
 
 	//errors
 	fmt.Println(errors.New("test eror message"))
+
+	//cryptography
+	h := crc32.NewIEEE()
+	h.Write([]byte("test"))
+	fmt.Println(h)
+	v := h.Sum32()
+	fmt.Println(v)
 }

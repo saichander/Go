@@ -14,6 +14,7 @@ func swap(x *int, y *int) {
 }
 func main() {
 	i := 2
+	fmt.Println("Hello world"[1])
 	zero(&i)
 	fmt.Println(i)
 
